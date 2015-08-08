@@ -19,6 +19,8 @@ class DatabaseSeeder extends Seeder
         $this->call(TipoFaturaSeeder::class);
         $this->call(TipoProdutoSeeder::class);
         $this->call(TipoPratoSeeder::class);
+        $this->call(ProdutoSeeder::class);
+        $this->call(PratoSeeder::class);
 
         Model::reguard();
     }

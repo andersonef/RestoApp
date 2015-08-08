@@ -15,7 +15,7 @@ class AuthController extends Controller
     public function index(Guard $guard)
     {
         if(!$guard->guest())
-            return redirect('app.dashboard.index');
+            return redirect(route('app.dashboard.index'));
 
         return view('layouts.login.index');
     }

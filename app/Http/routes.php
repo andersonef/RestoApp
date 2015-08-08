@@ -18,4 +18,6 @@ Route::get('/', ['uses' => 'AuthController@index']);
 
 Route::group(['middleware' => 'auth', 'prefix' => 'app'], function(){
     Route::resource('dashboard', 'App\DashboardController');
+    Route::resource('pedidos', 'App\PedidosController');
+    Route::resource('produto', 'App\ProdutoController');
 });

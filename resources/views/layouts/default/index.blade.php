@@ -60,9 +60,9 @@
         </div>
         <ul class="nav nav-sidebar" ng-controller="MenuController">
             <li class="tm nav-parent" ng-repeat="item in items">
-                <a href="@{{item.linkMenu}}"><i class="@{{item.iconMenu}}"></i><span>@{{item.textMenu}}</span> <span ng-show="item.Menus.length" class="fa arrow"></span></a>
+                <a href="@{{item.urlMenu}}"><i class="@{{item.iconMenu}}"></i><span>@{{item.textMenu}}</span> <span ng-show="item.Menus.length" class="fa arrow"></span></a>
                 <ul class="children collapse" style="display: none;" ng-show="item.Menus.length">
-                    <li class="" ng-repeat="subitem in item.Menus"><a href="@{{subitem.linkMenu}}">@{{subitem.textMenu}}</a></li>
+                    <li class="" ng-repeat="subitem in item.Menus"><a href="@{{subitem.urlMenu}}">@{{subitem.textMenu}}</a></li>
                 </ul>
             </li>
             <!--
@@ -800,5 +800,6 @@
   <script src="{{asset("components/version/version.js")}}"></script>
   <script src="{{asset("components/version/version-directive.js")}}"></script>
   <script src="{{asset("components/version/interpolate-filter.js")}}"></script>
+  @yield('javascript')
 </body>
 </html>
