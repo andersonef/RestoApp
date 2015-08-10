@@ -11,3 +11,8 @@ function selectValues(\Illuminate\Database\Eloquent\Collection $collection, $str
     foreach($collection as $col) $retorno[$col->$idField] = $col->$strField;
     return $retorno;
 }
+
+function dayOfWeek($num)
+{
+    return ['Domingo', 'Segunda', 'Terça', 'Quarta','Quinta','Sexta','Sábado'][$num];
+}

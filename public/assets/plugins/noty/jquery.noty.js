@@ -1,8 +1,10 @@
 /*!
  @package noty - jQuery Notification Plugin
- @version version: 2.3.4
+ @version version: 2.3.5
  @contributors https://github.com/needim/noty/graphs/contributors
+
  @documentation Examples and Documentation - http://needim.github.com/noty/
+
  @license Licensed under the MIT licenses: http://www.opensource.org/licenses/mit-license.php
  */
 
@@ -528,5 +530,5 @@
 
     // Helpers
     window.noty = function noty(options) {
-        return jQuery.notyRenderer.init(options);
+        return $.notyRenderer.init(options);
     };

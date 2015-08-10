@@ -12,6 +12,8 @@ class PratoSeeder extends Seeder
      */
     public function run()
     {
+        factory('RestoApp\Entities\Prato', 200)->create();
+        /*
         Prato::create(['idUsuario' => 1, 'nomePrato' => 'Arroz', 'idTipoPrato' => 1]);
         Prato::create(['idUsuario' => 1, 'nomePrato' => 'Feijão', 'idTipoPrato' => 1]);
         Prato::create(['idUsuario' => 1, 'nomePrato' => 'Macarrão Bolognesa', 'idTipoPrato' => 2]);
@@ -22,6 +24,6 @@ class PratoSeeder extends Seeder
         Prato::create(['idUsuario' => 1, 'nomePrato' => 'Peixe Grelhado', 'idTipoPrato' => 3]);
         Prato::create(['idUsuario' => 1, 'nomePrato' => 'Salada de alface', 'idTipoPrato' => 4]);
         Prato::create(['idUsuario' => 1, 'nomePrato' => 'Salada de repolho', 'idTipoPrato' => 4]);
-        Prato::create(['idUsuario' => 1, 'nomePrato' => 'Salada de tomate', 'idTipoPrato' => 4]);
+        Prato::create(['idUsuario' => 1, 'nomePrato' => 'Salada de tomate', 'idTipoPrato' => 4]);*/
     }
 }

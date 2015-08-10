@@ -16,7 +16,7 @@ class CreateProdutoTipoPratosTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('idProduto')->unsigned();
             $table->bigInteger('idTipoPrato')->unsigned();
-            $table->float('limiteRecipienteTipoPrato');
+            $table->float('limiteTipoPrato');
 
             $table->foreign('idProduto')->references('id')->on('produtos');
             $table->foreign('idTipoPrato')->references('id')->on('tipo_pratos');

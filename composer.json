@@ -8,7 +8,8 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "andersonef/repositories-pattern": "^1.0",
-        "illuminate/html": "^5.0"
+        "illuminate/html": "^5.0",
+        "laravelrus/localized-carbon": "^1.4"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

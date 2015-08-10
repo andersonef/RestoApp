@@ -1,26 +1,21 @@
 @inject('tipoProdutoService', 'RestoApp\Services\TipoProdutoService')
 @inject('tipoPratoService', 'RestoApp\Services\TipoPratoService')
 <fieldset>
-    <legend>Tipo do Pedido</legend>
+    <legend>Cardápio do dia</legend>
     <div class="form-group">
-        @foreach($tipoProdutoService->all() as $tipoProduto)
-            {!!Form::radio('idTipoProduto', $tipoProduto->id, false, ['id' => 'idTipoProduto'.$tipoProduto->id, 'class' => 'form-control'])!!} {!! Form::label('idTipoProduto'.$tipoProduto->id, $tipoProduto->descTipoProduto, ['class' => 'control-label']) !!}<br>
-        @endforeach
-    </div>
-    <div class="form-group">
-        {!! Form::label('idProduto', 'Selecione o Produto', ['class' => 'col-sm-2 control-label']) !!}
-        {!! Form::text('idProduto', null, ['id' => 'idProduto', 'class' => 'form-control']) !!}
+        {!! Form::label('dataCardapio', 'Data do Cardápio: ', ['class' => 'col-sm-2 control-label']) !!}
+        {!! Form::text('dataCardapio', null, ['id' => 'dataCardapio', 'class' => 'form-control', 'data-mask' => '99/99/9999']) !!}
     </div>
 </fieldset>
 <br>
 
 <fieldset class="fset-refeicao">
-    <legend>Detalhes da Refeição</legend>
+    <legend>Pratos</legend>
 
     @foreach($tipoPratoService->all() as $tipoPrato)
         <div class="form-group">
             {!! Form::label('idTipoPrato'.$tipoPrato->id, $tipoPrato->descTipoPrato, ['class' => 'control-label col-sm-2']) !!}
-            {!! Form::select('idPrato[]', selectValues($tipoPrato->Pratos, 'nomePrato'), null, ['id' => 'idPrato'.$tipoPrato->id, 'class' => 'form-control cmb-prato', 'multiple']) !!}
+            {!! Form::select('idPrato[]', selectValues($tipoPrato->Pratos, 'nomePrato'), (isset($cardapio)) ? selectValues($cardapio->Pratos, 'id') : null, ['id' => 'idPrato'.$tipoPrato->id, 'class' => 'form-control cmb-prato', 'multiple']) !!}
         </div>
     @endforeach
 </fieldset>
@@ -94,10 +89,4 @@
     </script>
 
 
-
-    <style type="text/css">
-        .fset-refeicao{
-            display: none;
-        }
-    </style>
 @endsection

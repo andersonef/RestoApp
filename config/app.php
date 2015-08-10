@@ -150,6 +150,7 @@ return [
          * Thirdy party providers...
          */
         Andersonef\Repositories\Providers\RepositoryProvider::class,
+        Laravelrus\LocalizedCarbon\LocalizedCarbonServiceProvider::class,
 
     ],
 
@@ -200,6 +201,9 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Form'      => \Illuminate\Html\FormFacade::class,
         'HTML'      => \Illuminate\Html\HtmlFacade::class,
+
+        'LocalizedCarbon'   => Laravelrus\LocalizedCarbon\LocalizedCarbon::class,
+        'DiffFormatter'     => Laravelrus\LocalizedCarbon\DiffFactoryFacade::class,
 
     ],
 

@@ -35,6 +35,7 @@ class ProdutoController extends Controller
 
             return new JsonResponse($this->produtoService
                 ->findByCriteria(app(FindUsingLikeCriteria::class, [$request->get('q')]))
+                ->with('TipoPratos')
                 ->get()
             );
         }

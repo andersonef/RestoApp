@@ -800,6 +800,18 @@
   <script src="{{asset("components/version/version.js")}}"></script>
   <script src="{{asset("components/version/version-directive.js")}}"></script>
   <script src="{{asset("components/version/interpolate-filter.js")}}"></script>
+  <script src="{{asset("assets/js/make-sytstem.js")}}"></script>
+
+  <script type="text/javascript">
+      @if(Session::has('success'))
+          Alert.success('{{Session::get('success')}}');
+      @endif
+
+      @if(Session::has('error'))
+          Alert.error('{{Session::get('error')}}');
+      @endif
+  </script>
+
   @yield('javascript')
 </body>
 </html>

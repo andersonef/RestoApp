@@ -19,3 +19,12 @@ $factory->define(RestoApp\User::class, function ($faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(\RestoApp\Entities\Prato::class, function($faker){
+    return [
+        'idUsuario' => 1,
+        'nomePrato' => $faker->sentence(3),
+        'idTipoPrato' => $faker->numberBetween(1,4),
+        'calPorcaoPrato' => $faker->numberBetween(30, 600)
+    ];
+});

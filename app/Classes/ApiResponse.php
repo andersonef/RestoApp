@@ -25,7 +25,7 @@ class ApiResponse extends JsonResponse{
 
     public function setMessage($msg){
         $this->myreturn['message'] = $msg;
-        $this->setContent($this->myreturn);
+        $this->setContent(json_encode($this->myreturn));
         return $this;
     }
 

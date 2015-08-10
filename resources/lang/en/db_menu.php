@@ -22,4 +22,9 @@ return [
     'gerenciarprodutos'       => 'Manage Products',
     'tiposdeprodutos'       => 'Product Types',
 
+    'cardapio'          => 'Menu',
+    'novocardapio'      => 'New Menu',
+    'listcardapio'      => 'List Menu',
+    'gerenciarprato'    => 'Gerenciar Pratos',
+
 ];
